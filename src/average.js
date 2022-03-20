@@ -33,8 +33,6 @@
 //      return Math.round(s/array.length);
       
 //       throw new Error("undefined");
-
-
 //     }
     
 //   } catch (error) {
@@ -46,23 +44,21 @@
 //   }
 // };
 
-//Alguns sites utilizados para a motagem desta função:
-//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round;
-
+// Alguns sites utilizados para a motagem desta função:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round;
 const average = (array) => {
-  if (array.length === 0){
+  if (array.length === 0) {
     return undefined;
   }
-  
   let soma = 0;
-  for (let i = 0; i < array.length; i +=1) {
-    if(typeof array[i] !== 'number'){
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] !== 'number') {
       return undefined;
     }
     soma += array[i];
   }
-  let media = soma/array.length;
+  let media = soma / array.length;
   return Math.round(media);
-}
+};
 
 module.exports = average;
