@@ -12,7 +12,57 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+// const arredondando = (media) => {
+//   Number.isInteger(media);
 
+//   if('false'){
+//     Math.round(media);
+//   }
+
+//   return media;
+// };
+
+// const average = (array) => {
+//   try {
+//     let s = 0;
+
+//     for (let i = 0; i < array.length; i += 1) {
+      
+//       s += array[i];
+      
+//      return Math.round(s/array.length);
+      
+//       throw new Error("undefined");
+
+
+//     }
+    
+//   } catch (error) {
+//     for (let j = 0; j < array.length; j += 1) {
+//       if (typeof array[j] !== 'number'){
+//         return error.messagem;
+//       }
+//     }
+//   }
+// };
+
+//Alguns sites utilizados para a motagem desta função:
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round;
+
+const average = (array) => {
+  if (array.length === 0){
+    return undefined;
+  }
+  
+  let soma = 0;
+  for (let i = 0; i < array.length; i +=1) {
+    if(typeof array[i] !== 'number'){
+      return undefined;
+    }
+    soma += array[i];
+  }
+  let media = soma/array.length;
+  return Math.round(media);
+}
 
 module.exports = average;
