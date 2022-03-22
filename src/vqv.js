@@ -16,6 +16,35 @@
       #VQV!'
 */
 
-const vqv = () => {};
+// const vqv = (name, idade) => {
+//   try {
+//     if (name === 'undefined' || idade === 'undefined') {
+//       throw new Error('undfined');
+//     }
 
+//     if (typeof name === 'string' || typeof idade === 'number'){
+//   let frase = `Oi, meu nome é ${name}!
+//   Tenho ${idade} anos,
+//   trabalho na Trybe e mando muito em programação!
+//   #VQV!`;
+//     return frase;
+
+//   } catch (error) {
+//     return error.message;
+//   }
+// };
+const vqv = (name, idade) => {
+  if (name === undefined || idade === 'undefined') {
+    return undefined;
+  }
+
+  if (typeof name === 'string' || typeof idade === 'number') {
+const frase = `Oi, meu nome é ${name}!
+Tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
+
+    return frase;
+  }
+};
 module.exports = vqv;
