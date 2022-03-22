@@ -33,12 +33,15 @@
 //     return error.message;
 //   }
 // };
-const vqv = (name, idade) => {
+const verifyParametros = (name, idade) => {
   if (name === undefined || idade === 'undefined') {
-    return undefined;
+    throw new Error('undefined');
   }
+};
 
-  if (typeof name === 'string' || typeof idade === 'number') {
+const vqv = (name, idade) => {
+  try {
+if (typeof name === 'string' || typeof idade === 'number') {
 const frase = `Oi, meu nome é ${name}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
@@ -46,5 +49,8 @@ trabalho na Trybe e mando muito em programação!
 
     return frase;
   }
+} catch (error) {
+  return console.error(error.messagem);
+}
 };
 module.exports = vqv;
