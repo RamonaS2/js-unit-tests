@@ -14,7 +14,13 @@
     estudante.name // Retorna: 'Leandrão, o Lobo Solitário'
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
-
-const createStudent = () => {};
+// Alguns sites utilizados: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects.
+const createStudent = (name) => {
+  let estudante = {
+    name,
+    feedback: () => 'Eita pessoa boa!',
+  };
+  return estudante;
+};
 
 module.exports = createStudent;
