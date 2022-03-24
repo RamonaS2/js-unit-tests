@@ -13,13 +13,22 @@ const numbers = require('../src/numbers');
     - numbers([2, 'errado', 5]); // Retorna: false
 
 */
-
-describe('2 - Implemente os casos de teste para a função `numbers`', () => {
-  it('Verifica se a função `numbers`retorna `true` quando o array contém apenas numeros e falso caso contrário', () => {
-    fail('Teste vazio!');
-    // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
+  describe('2 - implementação de testes da função numbers', () => {
+   // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
+    it('Se a função numbers recebe um array de numeros ela retorna true', () => {
+      expect(numbers([1, 2, 3, 4, 5])).toBe(true);
+    });
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
+    it('Se a função numbers recebe um array com string ele retorna false', () => {
+      expect(numbers([1, 2, '3', 4, 5])).toBe(false);
+    });
     // Escreva um teste em que a função recebe [1, 'a', 3] e retorna false
+    it('Se a função numbers recebe um array com string ele retorna false', () => {
+      expect(numbers([1, 'a', 3])).toBe(false);
+    });
     // Escreva um teste em que a função recebe [' '] e retorna false
+    it('Se a função numbers recebe um array vazio ele retorna false', () => {
+      expect(numbers([' '])).toBe(false);
+    });
   });
-});
+
