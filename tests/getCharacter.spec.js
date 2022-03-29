@@ -40,29 +40,30 @@ Retorno:
   phrases: [ 'Not today', 'A girl has no name.' ]
 }
 */
-
+describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    test('Se a função não recebe nenhum parâmetro retorna undefined', () => {
+    it('Se a função não recebe nenhum parâmetro retorna undefined', () => {
       expect(getCharacter()).toBeUndefined()
     })
     // Teste se a função retorna o objeto correto para o parâmetro 'Arya',
-    test('Se a função retorna o objeto correto para o parâmetro Arya', () => {
+    it('Se a função retorna o objeto correto para o parâmetro Arya', () => {
       expect(getCharacter('Arya')).toEqual({name: 'Arya Stark', class: 'Rogue', phrases: [ 'Not today', 'A girl has no name.' ] })
     })
     // Teste se a função retorna o objeto correto para o parâmetro 'Brienne',
-    test('Se a função retorna o objeto correto para o parâmetro Brienne', () => {
+    it('Se a função retorna o objeto correto para o parâmetro Brienne', () => {
       expect(getCharacter('Brienne')).toEqual({name: 'Brienne Tarth', class: 'Knight', phrases: [ 'Im No Lady, Your Grace.', 'I, Brienne Of Tarth, Sentence You To Die.' ] })
     })
     // Teste se a função retorna o objeto correto para o parâmetro 'Melissandre',
-    test('Se a função retorna o objeto correto para o parâmetro Melissandre', () => {
+    it('Se a função retorna o objeto correto para o parâmetro Melissandre', () => {
       expect(getCharacter('Melissandre')).toEqual({name: 'Melissandre', class: 'Necromancer', phrases: [ 'Death By Fire Is The Purest Death.', 'For The Night Is Dark And Full Of Terrors.'] })
     })
     // Teste se os parâmetros não são Case Sensitive.
-    test('Se os parâmetros não são Case Sensitive', () => {
+    it('Se os parâmetros não são Case Sensitive', () => {
       expect(getCharacter('aryA')).toEqual({name: 'Arya Stark', class: 'Rogue', phrases: [ 'Not today', 'A girl has no name.' ] })
     })
     // Teste se ao passar um nome que não está na tabela, a função retorna undefined.
-    test('Se ao passar  um nome que não está na tabela a função retorna undefined', () => {
+    it('Se ao passar  um nome que não está na tabela a função retorna undefined', () => {
       expect(getCharacter('Alex')).toBeUndefined()
     })
+  });
