@@ -25,7 +25,7 @@ const productDetails = require('../src/productDetails');
   ]
 
 */
-describe('6 - teste a função productDetails', () => {
+describe('6 - Implemente os casos de teste para a função `productDetails`', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se productDetails é uma função.
     it('Se productDetails é uma função', () => {
