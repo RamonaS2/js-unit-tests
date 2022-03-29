@@ -13,7 +13,7 @@ const numbers = require('../src/numbers');
     - numbers([2, 'errado', 5]); // Retorna: false
 
 */
-  describe('2 - implementação de testes da função numbers', () => {
+describe('2 - Implemente os casos de teste para a função `numbers`', () => {
    // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
     it('Se a função numbers recebe um array de numeros ela retorna true', () => {
       expect(numbers([1, 2, 3, 4, 5])).toBe(true);
@@ -31,4 +31,3 @@ const numbers = require('../src/numbers');
       expect(numbers([' '])).toBe(false);
     });
   });
-
