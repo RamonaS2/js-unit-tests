@@ -22,40 +22,40 @@ const circle = require('../src/circle');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-
+describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
-   test('Se circle retorna undefined, caso o parâmetro passado não seja um número', () => {
+   it('Se circle retorna undefined, caso o parâmetro passado não seja um número', () => {
     expect(circle('3')).toBe(undefined);
   })
 
     // Teste se circle retorna um objeto.
-    test('se circle retorna um objeto', () => {
+    it('se circle retorna um objeto', () => {
       const circulo = circle(5);
       expect(typeof circulo).toBe('object')
     })
     // Teste se o objeto retornado tem 3 propriedades.
-    test('Se o objeto retornado tem três propriedades', () => {
+    it('Se o objeto retornado tem três propriedades', () => {
       const circulo = circle(3);
       expect(Object.keys(circulo)).toContain('radius', 'area', 'circumference');
     })
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    test('Se a função circle não recebe nenhum parâmetro retorna undefined', () => {
+    it('Se a função circle não recebe nenhum parâmetro retorna undefined', () => {
       expect(circle()).toBe(undefined)
     })
     // Teste se dentro do objeto retornado, a função retorna uma key com value igual a circunferência correta para um círculo de raio 2.
-    test('Se dentro do objeto retornado, a função retorna uma key com value igual a circunferência correta para um círculo de raio 2', () => {
+    it('Se dentro do objeto retornado, a função retorna uma key com value igual a circunferência correta para um círculo de raio 2', () => {
       const circulo = circle(2);
       parseFloat(circulo.circumference).toPrecision(2)
     })
     // Teste se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3.
-    test('Se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3', () => {
+    it('Se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3', () => {
       const circulo = circle(3);
       parseFloat(circulo.area).toPrecision(3)
     })
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    test('Se a função retorna, num objeto, os dados corretos de um círculo de raio 3', () => {
+    it('Se a função retorna, num objeto, os dados corretos de um círculo de raio 3', () => {
      const circulo = circle(3);
      parseFloat(circulo).toPrecision(3)
     })
-
+  });
